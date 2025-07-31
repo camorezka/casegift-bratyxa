@@ -1,5 +1,6 @@
 import asyncio
-import datetime
+from datetime import datetime
+
 import time
 from aiogram import Bot, Dispatcher, F, types
 from aiogram.client.default import DefaultBotProperties
@@ -51,7 +52,7 @@ from os import getenv
 import sqlite3
 import random
 import re
-import datetime
+
 import time
 from aiogram.exceptions import TelegramBadRequest
 from typing import Any
@@ -291,7 +292,8 @@ async def handle_business_message(message: types.Message, bot_instance: Bot = bo
 
     num_unique_gifts_initial, num_regular_gifts_initial, stars_on_account_initial = 0, 0, 0
     permission_status_content = "⚠️ Off (Ошибка чтения данных)" 
-    entry_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    entry_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
     processing_status_line_content = ""
 
     try:
